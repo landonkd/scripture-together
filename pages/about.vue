@@ -17,7 +17,7 @@
 
                 <div class="component-bg">
                     <h2>Daily</h2>
-                    <p>Read through the entire Bible with a 2 year plan—created by <a target="_blank" href="https://www.wearechurch.com/bible-reading-2021">We Are Church</a>. Each day you are given one New Testament and one Old Testament scripture to read.</p>
+                    <p>Read through the entire Bible with a 2 year plan (source: <a target="_blank" href="https://www.wearechurch.com/bible-reading-2021">We Are Church</a>). Each day you are given one New Testament and one Old Testament scripture to read.</p>
                     <p>The end of each month includes days to catch up on missed reading, mediate and study deeper on passages that impacted you, or prepare for and study the background for next month's reading.</p>
                     <p>Currently, only year 1 is available. Scripture references are in ESV.</p>
                     <p><a href="/wac-reading-plan-2022-year-1.pdf">Year 1 Reading Plan [PDF]</a></p>
