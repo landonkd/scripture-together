@@ -18,14 +18,15 @@
 
                 <div class="component-bg reading">
                     <h2>Reading</h2>
-                    <TransitionGroup name="list" tag="ul">
-                        <li class="nt">
+
+                    <ul>
+                        <li>
                             <a :href="`https://www.biblegateway.com/passage/?search=${readings[day - 1].nt}&version=ESV`" :key="readings[day - 1].nt" target="_blank">{{ readings[day - 1].nt }}</a>
                         </li>
-                        <li class="ot">
+                        <li>
                             <a :href="`https://www.biblegateway.com/passage/?search=${readings[day - 1].ot}&version=ESV`" :key="readings[day - 1].ot" target="_blank">{{ readings[day - 1].ot }}</a>
                         </li>
-                    </TransitionGroup>
+                    </ul>
                 </div>
 
                 <div class="component-bg reflection">
@@ -44,7 +45,7 @@
 
     // Fetch Data
     const { data : readings } = await useFetch('/api/wac')
-
+    const testament = ['nt', 'ot']
 
     // Date Manipulations
     const today = new Date()

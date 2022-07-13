@@ -33,13 +33,13 @@ a:hover, a:focus {
   margin: 0 auto;
 }
 
-nav#primary-nav {
+#primary-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 8px 16px;
-  -webkit-backdrop-filter: saturate(50%) blur(8px);
-  backdrop-filter: saturate(50%) blur(8px);
+  -webkit-backdrop-filter: saturate(50%) blur(7px);
+  backdrop-filter: saturate(50%) blur(7px);
   background: rgba(24, 45, 74, 0.9);
   border-bottom: 1px solid rgba(50, 138, 241, 0.1);
   text-align: center;
@@ -50,24 +50,24 @@ nav#primary-nav {
   width: 100%;
 }
 
-nav#primary-nav ul {
+#primary-nav ul {
   list-style: none;
   padding: 0;
 }
 
-nav#primary-nav ul li {
+#primary-nav ul li {
   margin: 4px 16px;
   display: inline-block;
 }
 
-nav#primary-nav ul li a {
+#primary-nav ul li a {
   text-decoration: none;
   color: rgba(186, 217, 252, 0.3);
   position: relative;
   padding: 10px 0;
 }
 
-nav#primary-nav ul li a:after {
+#primary-nav ul li a:after {
   content: '';
   position: absolute;
   width: calc(100% - 20%);
@@ -81,24 +81,24 @@ nav#primary-nav ul li a:after {
   opacity: 0;
 }
 
-nav#primary-nav ul li a:hover, nav#primary-nav ul li a:focus {
+#primary-nav ul li a:hover, #primary-nav ul li a:focus {
   color: white;
   text-decoration: none;
   -webkit-transition: .1s;
   transition: .1s;
 }
 
-nav#primary-nav ul li a:hover:after, nav#primary-nav ul li a:focus:after {
+#primary-nav ul li a:hover:after, #primary-nav ul li a:focus:after {
   width: 110%;
   left: -5%;
   opacity: 1;
 }
 
-nav#primary-nav ul li a.router-link-active {
+#primary-nav ul li a.router-link-active {
   color: white;
 }
 
-nav#primary-nav ul li a.router-link-active:after {
+#primary-nav ul li a.router-link-active:after {
   opacity: 1;
 }
 
@@ -117,13 +117,14 @@ main#about-page h1 {
 main#about-page h1 .gradient-green {
   background: linear-gradient(135deg, #1AAB8B 25%, rgba(186, 217, 252, 0.3));
   -webkit-background-clip: text;
+  background-clip: text;
   color: white;
   -webkit-text-fill-color: transparent;
 }
 
 main#about-page h1 .reset-color {
   background: none;
-  -webkit-background-clip: initial;
+  background-clip: initial;
   -webkit-text-fill-color: initial;
 }
 
@@ -146,7 +147,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 0 48px 0;
+  margin: 0 0 40px 0;
 }
 
 header .page-heading {
@@ -188,14 +189,14 @@ header .page-heading h1 {
 }
 
 .prev-btn, .next-btn {
-  border-radius: 50px;
+  border-radius: 20px;
   border: 1px solid rgba(50, 138, 241, 0.1);
   -webkit-box-shadow: none;
           box-shadow: none;
   background: #182D4A;
   font-family: inherit;
   color: inherit;
-  padding: 12px;
+  padding: 16px;
   font-size: .8125rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -212,11 +213,13 @@ header .page-heading h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
 }
 
 @media (min-width: 460px) {
   .prev-btn, .next-btn {
-    padding: 16px;
+    padding: 20px;
   }
 }
 
@@ -302,8 +305,8 @@ header .page-heading h1 {
 .list-move,
 .list-enter-active,
 .list-leave-active {
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .list-enter-from {

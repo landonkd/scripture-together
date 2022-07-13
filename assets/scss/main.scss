@@ -2,16 +2,21 @@
 
 // VAR
 $blue: #328af1;
-$blue-2: #182D4A;
-$blue-3: rgb(21,31,50);
-$green: #1AAB8B;
 $purple: #837EB6;
+
+$bg-dark: #182D4A;
+$bg-dark-2: rgb(21,31,50);
+
+$highlight: #1AAB8B;
+
 $body-text: rgba(255,255,255,.85);
 $light-text: rgba(186,217,252,.3);
 $light-text-2: rgba(255,255,255,.4);
 $white: white;
 $border-color: rgba(50,138,241,.1);
 $container: 600px;
+
+
 
 // Helpers
 .light-text {
@@ -20,7 +25,7 @@ $container: 600px;
 
 
 html {
-    background: $blue-3;
+    background: $bg-dark-2;
     background: linear-gradient(0deg, rgba(21,31,50,1) 0%, rgba(25,41,70,1) 100%);
     min-height: 100vh;
 }
@@ -32,7 +37,7 @@ body {
     line-height: 1.625;
 }
 a {
-    color: $green;
+    color: $highlight;
     text-decoration: none;
     &:hover, &:focus {
         text-decoration: underline;
@@ -43,11 +48,11 @@ a {
     max-width: $container;
     margin: 0 auto;
 }
-nav#primary-nav {
+#primary-nav {
     display: flex;
     padding: 8px 16px;
-    -webkit-backdrop-filter: saturate(50%) blur(8px);
-    backdrop-filter: saturate(50%) blur(8px);
+    -webkit-backdrop-filter: saturate(50%) blur(7px);
+    backdrop-filter: saturate(50%) blur(7px);
     background: rgba(24, 45, 74, .9);
     border-bottom: 1px solid $border-color;
     text-align: center;
@@ -73,7 +78,7 @@ nav#primary-nav {
                     width: calc(100% - 20%);
                     height: 4px;
                     border-radius: 30px;
-                    background: $green;
+                    background: $highlight;
                     bottom: 0px;
                     left: 10%;
                     transition: .1s;
@@ -109,14 +114,16 @@ main {
             text-align: center;
             
             .gradient-green {
-                background: linear-gradient(135deg, $green 25%, $light-text);
+                background: linear-gradient(135deg, $highlight 25%, $light-text);
                 -webkit-background-clip: text;
+                background-clip: text;
                 color: $white;
                 -webkit-text-fill-color: transparent;
             }
             .reset-color {
                 background: none;
                 -webkit-background-clip: initial;
+                background-clip: initial;
                 -webkit-text-fill-color: initial;
             }
         }
@@ -137,7 +144,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 48px 0;
+    margin: 0 0 40px 0;
     .page-heading {
         display: flex;
         justify-content: center;
@@ -156,22 +163,22 @@ header {
 
 .today-date {
     border-radius: 50px;
-    border: 1px solid $green;
-    background: $blue-2;
-    color: $green;
+    border: 1px solid $highlight;
+    background: $bg-dark;
+    color: $highlight;
     padding: 4px 16px;
     margin-left: 8px;
     font-size: 1rem;
 }
 
 .prev-btn, .next-btn {
-    border-radius: 50px;
+    border-radius: 20px;
     border: 1px solid $border-color;
     box-shadow: none;
-    background: $blue-2;
+    background: $bg-dark;
     font-family: inherit;
     color: inherit;
-    padding: 12px;
+    padding: 16px;
     font-size: .8125rem; 
     font-weight: 700;
     letter-spacing: 1px;
@@ -181,15 +188,16 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: stretch;
     @media (min-width: 460px) {
-        padding: 16px;
+        padding: 20px;
     }
     svg {
         color: $light-text;
         transition: .1s;
     }
     &:hover {
-        background: lighten($blue-2, 5%);
+        background: lighten($bg-dark, 5%);
         svg {
             color: $body-text;
         }
@@ -198,7 +206,7 @@ header {
 
 .section-title {
     margin: 20px 0;
-    background: $green;
+    background: $highlight;
     color: $body-text;
     padding: 16px 20px;
     border-radius: 20px;
@@ -217,7 +225,7 @@ header {
 }
 
 .component-bg {
-    background: $blue-2;
+    background: $bg-dark;
     border-radius: 20px;  
     padding: 20px 24px; 
     margin: 20px 0;
@@ -233,7 +241,7 @@ header {
         margin-bottom: 8px;
     }
     strong.sub-head {
-        color: $green;
+        color: $highlight;
         font-weight: 700;
         font-size: .8125rem;
         text-transform: uppercase;
@@ -255,7 +263,7 @@ header {
 .list-move, 
 .list-enter-active,
 .list-leave-active {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .list-enter-from {
