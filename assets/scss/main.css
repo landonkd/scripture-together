@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+.light-text {
+  color: rgba(186, 217, 252, 0.3);
+}
+
+html {
+  background: #151f32;
+  background: -webkit-gradient(linear, left bottom, left top, from(#151f32), to(#192946));
+  background: linear-gradient(0deg, #151f32 0%, #192946 100%);
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.625;
+}
+
+a {
+  color: #1AAB8B;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+nav#primary-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 16px;
+  -webkit-backdrop-filter: saturate(50%) blur(8px);
+  backdrop-filter: saturate(50%) blur(8px);
+  background: rgba(24, 45, 74, 0.9);
+  border-bottom: 1px solid rgba(50, 138, 241, 0.1);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav#primary-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav#primary-nav ul li {
+  margin: 4px 16px;
+  display: inline-block;
+}
+
+nav#primary-nav ul li a {
+  text-decoration: none;
+  color: rgba(186, 217, 252, 0.3);
+  position: relative;
+  padding: 10px 0;
+}
+
+nav#primary-nav ul li a:after {
+  content: '';
+  position: absolute;
+  width: calc(100% - 20%);
+  height: 4px;
+  border-radius: 30px;
+  background: #1AAB8B;
+  bottom: 0px;
+  left: 10%;
+  -webkit-transition: .1s;
+  transition: .1s;
+  opacity: 0;
+}
+
+nav#primary-nav ul li a:hover, nav#primary-nav ul li a:focus {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+nav#primary-nav ul li a:hover:after, nav#primary-nav ul li a:focus:after {
+  width: 110%;
+  left: -5%;
+  opacity: 1;
+}
+
+nav#primary-nav ul li a.router-link-active {
+  color: white;
+}
+
+nav#primary-nav ul li a.router-link-active:after {
+  opacity: 1;
+}
+
+main {
+  width: 100%;
+  max-width: 600px;
+  margin: 84px auto 0;
+}
+
+main#about-page h1 {
+  line-height: 1.3;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+main#about-page h1 .gradient-green {
+  background: linear-gradient(135deg, #1AAB8B 25%, rgba(186, 217, 252, 0.3));
+  -webkit-background-clip: text;
+  color: white;
+  -webkit-text-fill-color: transparent;
+}
+
+main#about-page h1 .reset-color {
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+main#about-page .emoji {
+  font-size: 3em;
+  margin-top: -5px;
+}
+
+main .main__inner-container {
+  padding: 40px 20px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 48px 0;
+}
+
+header .page-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 100%;
+}
+
+header .page-heading h1 {
+  margin: 0 auto 5px auto;
+  font-size: 2rem;
+}
+
+@media (min-width: 460px) {
+  header .page-heading h1 {
+    font-size: 2rem;
+  }
+}
+
+.today-date {
+  border-radius: 50px;
+  border: 1px solid #1AAB8B;
+  background: #182D4A;
+  color: #1AAB8B;
+  padding: 4px 16px;
+  margin-left: 8px;
+  font-size: 1rem;
+}
+
+.prev-btn, .next-btn {
+  border-radius: 50px;
+  border: 1px solid rgba(50, 138, 241, 0.1);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #182D4A;
+  font-family: inherit;
+  color: inherit;
+  padding: 12px;
+  font-size: .8125rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: .1s;
+  transition: .1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 460px) {
+  .prev-btn, .next-btn {
+    padding: 16px;
+  }
+}
+
+.prev-btn svg, .next-btn svg {
+  color: rgba(186, 217, 252, 0.3);
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: #1e395d;
+}
+
+.prev-btn:hover svg, .next-btn:hover svg {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section-title {
+  margin: 20px 0;
+  background: #1AAB8B;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 16px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: .8125rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-title svg {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 8px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.component-bg {
+  background: #182D4A;
+  border-radius: 20px;
+  padding: 20px 24px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.component-bg > h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.component-bg > ul {
+  padding-left: 24px;
+}
+
+.component-bg > *:last-child {
+  margin-bottom: 8px;
+}
+
+.component-bg strong.sub-head {
+  color: #1AAB8B;
+  font-weight: 700;
+  font-size: .8125rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+.component-bg.reflection li {
+  margin-bottom: 12px;
+}
+
+.component-bg.reflection li:last-of-type {
+  margin-bottom: 0;
+}
+
+/* apply transition to moving elements */
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-enter-from {
+  opacity: 0;
+}
+
+.list-leave-to {
+  -webkit-transform: none;
+          transform: none;
+}
+
+/* ensure leaving items are taken out of layout flow so that moving animations can be calculated correctly. */
+.list-leave-active {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: .0s;
+  transition: .0s;
+}
+
+.page-enter-active {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.page-enter-from {
+  opacity: 0;
+}
+
+.page-leave-active {
+  opacity: 0;
+  -webkit-transition: .0s;
+  transition: .0s;
+}
+/*# sourceMappingURL=main.css.map */
