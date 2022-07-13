@@ -4,7 +4,7 @@
 }
 
 html {
-  background: #151f32;
+  background: #151F32;
   background: -webkit-gradient(linear, left bottom, left top, from(#151f32), to(#192946));
   background: linear-gradient(0deg, #151f32 0%, #192946 100%);
   min-height: 100vh;

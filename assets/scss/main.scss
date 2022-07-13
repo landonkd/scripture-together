@@ -5,7 +5,7 @@ $blue: #328af1;
 $purple: #837EB6;
 
 $bg-dark: #182D4A;
-$bg-dark-2: rgb(21,31,50);
+$bg-dark-2: #151F32;
 
 $highlight: #1AAB8B;
 
@@ -26,7 +26,7 @@ $container: 600px;
 
 html {
     background: $bg-dark-2;
-    background: linear-gradient(0deg, rgba(21,31,50,1) 0%, rgba(25,41,70,1) 100%);
+    background: linear-gradient(0deg, rgba($bg-dark-2,1) 0%, rgba(25,41,70,1) 100%);
     min-height: 100vh;
 }
 body {
