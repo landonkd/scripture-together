@@ -40,7 +40,7 @@ a:hover, a:focus {
   padding: 4px 0;
   -webkit-backdrop-filter: saturate(50%) blur(7px);
   backdrop-filter: saturate(50%) blur(7px);
-  background: rgba(24, 45, 74, 0.9);
+  background: rgba(21, 31, 50, 0.9);
   border-bottom: 1px solid rgba(50, 138, 241, 0.1);
   text-align: center;
   text-transform: uppercase;
@@ -112,12 +112,12 @@ a:hover, a:focus {
 main {
   width: 100%;
   max-width: 600px;
-  margin: 72px auto 0;
+  margin: 64px auto 0;
 }
 
 @media (min-width: 600px) {
   main {
-    margin: 84px auto 0;
+    margin: 76px auto 0;
   }
 }
 
