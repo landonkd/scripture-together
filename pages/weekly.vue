@@ -18,7 +18,6 @@
                 </header>
 
                 
-
                 <div class="section-title">
                     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
                     <div>{{ `${readings[currentWeek - 1].part}: ${readings[currentWeek - 1].title}` }}</div>
@@ -86,11 +85,8 @@
         first.value = new Date(first.value.valueOf() - week);
         last.value = new Date(last.value.valueOf() - week);
     }
-
     function parseDate(d) {
         return (d.getMonth() + 1) + '/' + d.getDate()
     }
-
-    
 
 </script>

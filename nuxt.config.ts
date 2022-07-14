@@ -5,7 +5,9 @@ export default defineNuxtConfig({
     css: [
         '@/assets/scss/main.css'
     ],
-    modules: ['nuxt-progress'],
+    modules: [
+        '@nuxtjs/color-mode',
+        'nuxt-progress'],
         progress: {
             // Default: 2px
             height: '2px',
@@ -15,5 +17,5 @@ export default defineNuxtConfig({
             options: {
             showSpinner: false
         }
-    }
+    },
 })

@@ -3,41 +3,89 @@
 // VAR
 $blue: #328af1;
 $purple: #837EB6;
-
-$bg-dark: #182D4A;
-$bg-dark-2: #151F32;
-
-$highlight: #1AAB8B;
-
-$body-text: rgba(255,255,255,.85);
-$light-text: rgba(186,217,252,.3);
-$light-text-2: rgba(255,255,255,.4);
-$white: white;
-$border-color: rgba(50,138,241,.1);
 $container: 600px;
-
-
-
-// Helpers
-.light-text {
-    color: $light-text;
-}
+$border-radius: 20px;
 
 
 html {
-    background: $bg-dark-2;
-    background: linear-gradient(0deg, rgba($bg-dark-2,1) 0%, rgba(25,41,70,1) 100%);
     min-height: 100vh;
+    
+    // Dark Mode is default
+    --highlight: #1AAB8B;
+    --bg-dark: #182D4A;
+    --bg-dark-2: #151F32;
+    --bg-dark-2-rgb: 21,31,50;
+    --body-text: rgba(255,255,255,.85);
+    --light-text: rgba(186,217,252,.3);
+    --off-white: var(--body-text);
+    --border-color: rgba(50,138,241,.1);
+    --btn-hover: rgba(50,138,241,.1);
+    background-color: var(--bg-dark-2);
+    background: linear-gradient(0deg, var(--bg-dark-2) 0%, rgba(25,41,70,1) 100%);
+
+    &.light-mode {
+        --highlight: #1AAB8B;
+        --bg-dark: #FFF;
+        --bg-dark-2: #F8FAFC;
+        --bg-dark-2-rgb: 248,250,252;
+        --bg-dark-3: #dfe0e5;
+        --body-text: #0f172a;
+        --light-text: #64748b;
+        --off-white: #FFF;
+        --border-color: rgba(50,138,241,.1);
+        --btn-hover: #d1eee8;
+        background-color: var(--bg-dark-2);
+        background: linear-gradient(0deg, var(--bg-dark-3) 0%, var(--bg-dark-2) 100%);
+
+        .next-btn, .prev-btn {
+            &:hover, &:focus {
+                border-color: #a3ddd1;
+                svg {
+                    color: var(--highlight);
+                }
+            }
+        }
+    }
 }
+
+.color-mode-control {
+    display: flex;
+    margin: 20px auto;
+    width: 100%;
+    justify-content: center;
+}
+.color-toggle {
+    background: var(--bg-dark-2);
+    border: 1px solid var(--border-color);
+    color: var(--body-text);
+    border-radius: 50px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    touch-action: manipulation;
+    font-size: 1rem;
+    transition: .1s;
+    &:hover, &:focus {
+        background: var(--btn-hover);
+    }
+    svg {
+        stroke: var(--highlight);
+        margin-right: 8px;
+    }
+}
+
+
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    color: $body-text;
+    color: var(--body-text);
     line-height: 1.625;
 }
 a {
-    color: $highlight;
+    color: var(--highlight);
     text-decoration: none;
     &:hover, &:focus {
         text-decoration: underline;
@@ -53,8 +101,8 @@ a {
     padding: 4px 0;
     -webkit-backdrop-filter: saturate(50%) blur(7px);
     backdrop-filter: saturate(50%) blur(7px);
-    background: rgba($bg-dark-2, .9);
-    border-bottom: 1px solid $border-color;
+    background: rgba(var(--bg-dark-2-rgb), .9);
+    border-bottom: 1px solid var(--border-color);
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
@@ -74,7 +122,7 @@ a {
             display: inline-block;
             a {
                 text-decoration: none;
-                color: $light-text;
+                color: var(--light-text);
                 position: relative;
                 padding: 10px 0;
                 &:after {
@@ -83,14 +131,14 @@ a {
                     width: calc(100% - 20%);
                     height: 4px;
                     border-radius: 30px;
-                    background: $highlight;
+                    background: var(--highlight);
                     bottom: 0px;
                     left: 10%;
                     transition: .1s;
                     opacity: 0;
                 }
                 &:hover, &:focus {
-                    color: $white;
+                    color: var(--white);
                     text-decoration: none;
                     transition: .1s;
 
@@ -101,7 +149,7 @@ a {
                     }
                 }
                 &.router-link-active {
-                    color: $white;
+                    color: var(--white);
                     &:after {
                         opacity: 1;
                     }
@@ -128,10 +176,10 @@ main {
             text-align: center;
             
             .gradient-green {
-                background: linear-gradient(135deg, $highlight 25%, $light-text);
+                background: linear-gradient(135deg, var(--highlight) 25%, var(--light-text));
                 -webkit-background-clip: text;
                 background-clip: text;
-                color: $white;
+                color: var(--white);
                 -webkit-text-fill-color: transparent;
             }
             .reset-color {
@@ -171,9 +219,8 @@ header {
 
 .today-date {
     border-radius: 50px;
-    border: 1px solid $highlight;
-    background: $bg-dark;
-    color: $highlight;
+    border: 1px solid var(--highlight);
+    color: var(--highlight);
     padding: 4px 16px;
     margin-left: 8px;
     font-size: 1rem;
@@ -181,9 +228,9 @@ header {
 
 .prev-btn, .next-btn {
     border-radius: 20px;
-    border: 1px solid $border-color;
+    border: 1px solid var(--border-color);
     box-shadow: none;
-    background: $bg-dark;
+    background: var(--bg-dark);
     font-family: inherit;
     color: inherit;
     padding: 20px;
@@ -203,21 +250,21 @@ header {
         padding: 24px;
     }
     svg {
-        color: $light-text;
+        color: var(--light-text);
         transition: .1s;
     }
     &:hover {
-        background: lighten($bg-dark, 5%);
+        background: var(--btn-hover);
         svg {
-            color: $body-text;
+            color: var(--body-text);
         }
     }
 }
 
 .section-title {
     margin: 20px 0;
-    background: $highlight;
-    color: $body-text;
+    background: var(--highlight);
+    color: var(--off-white);
     padding: 16px 20px;
     border-radius: 20px;
     font-weight: 700;
@@ -230,12 +277,12 @@ header {
     svg {
         flex-shrink: 0;
         margin-right: 8px;
-        color: $light-text-2;
+        color: rgba(255,255,255,.65);
     }
 }
 
 .component-bg {
-    background: $bg-dark;
+    background: var(--bg-dark);
     border-radius: 20px;  
     padding: 20px 24px; 
     margin: 20px 0;
@@ -251,7 +298,7 @@ header {
         margin-bottom: 8px;
     }
     strong.sub-head {
-        color: $highlight;
+        color: var(--highlight);
         font-weight: 700;
         font-size: .8125rem;
         text-transform: uppercase;
@@ -260,7 +307,16 @@ header {
     }
     &.reflection {
         li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .end-month {
+        padding-left: 24px;
+        li {
+            margin-bottom: 10px;
             &:last-of-type {
                 margin-bottom: 0;
             }

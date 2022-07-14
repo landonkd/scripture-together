@@ -20,7 +20,7 @@
                 <div class="component-bg reading">
                     <h2>Reading</h2>
 
-                    <ul>
+                    <ul v-if="readings[day - 1].nt !== 'x'">
                         <li>
                             <a :href="`https://www.biblegateway.com/passage/?search=${readings[day - 1].nt}&version=ESV`" :key="readings[day - 1].nt" target="_blank">{{ readings[day - 1].nt }}</a>
                         </li>
@@ -28,6 +28,14 @@
                             <a :href="`https://www.biblegateway.com/passage/?search=${readings[day - 1].ot}&version=ESV`" :key="readings[day - 1].ot" target="_blank">{{ readings[day - 1].ot }}</a>
                         </li>
                     </ul>
+                    <div v-if="readings[day - 1].nt == 'x'">
+                        <p><strong class="sub-head">End of the Month</strong></p>
+                        <ol class="end-month">
+                            <li>Catch up on any missed reading.</li>
+                            <li>Meditate and study deeper on passages that have impacted you this month.</li>
+                            <li>Start to prepare for and study backgrounds for next month's Scriptural reading.</li>
+                        </ol>
+                    </div>
                 </div>
 
                 <div class="component-bg reflection">
