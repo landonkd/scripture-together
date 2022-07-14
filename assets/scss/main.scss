@@ -186,7 +186,7 @@ header {
     background: $bg-dark;
     font-family: inherit;
     color: inherit;
-    padding: 16px;
+    padding: 20px;
     font-size: .8125rem; 
     font-weight: 700;
     letter-spacing: 1px;
@@ -199,8 +199,8 @@ header {
     align-items: center;
     align-self: stretch;
 
-    @media (min-width: 460px) {
-        padding: 20px;
+    @media (min-width: 600px) {
+        padding: 24px;
     }
     svg {
         color: $light-text;

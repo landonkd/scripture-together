@@ -209,7 +209,7 @@ header .page-heading h1 {
   background: #182D4A;
   font-family: inherit;
   color: inherit;
-  padding: 16px;
+  padding: 20px;
   font-size: .8125rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -232,9 +232,9 @@ header .page-heading h1 {
       align-self: stretch;
 }
 
-@media (min-width: 460px) {
+@media (min-width: 600px) {
   .prev-btn, .next-btn {
-    padding: 20px;
+    padding: 24px;
   }
 }
 
