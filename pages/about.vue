@@ -17,7 +17,7 @@
                 <div class="color-mode-control" v-if="$colorMode.preference == 'light'">
                     <ButtonDark @click="$colorMode.preference = 'dark'"></ButtonDark>
                 </div>
-                <div class="color-mode-control" v-if="$colorMode.preference == 'dark'">
+                <div class="color-mode-control" v-else>
                     <ButtonLight @click="$colorMode.preference = 'light'"></ButtonLight>
                 </div>                
 
