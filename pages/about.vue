@@ -32,6 +32,7 @@
                 <div class="component-bg">
                     <h2>Weekly</h2>
                     <p>A 52 week devotional designed to take you through the overarching story of the Bible while staying in sync with the traditional church calendar. This material has been taken from the book <a href="https://www.amazon.com/Make-Road-Walking-Reorientation-Activation/dp/1455514012/ref=sr_1_1?gclid=CjwKCAjwiJqWBhBdEiwAtESPaIWw4cM4FHDsnFlMVWOAw6LrwUIJJe5N4fct0xYKdJKSksrQlBASIxoCmCcQAvD_BwE&hvadid=409996860143&hvdev=c&hvlocphy=9008336&hvnetw=g&hvqmt=e&hvrand=9272172976646484643&hvtargid=kwd-434633975&hydadcr=24627_11409941&keywords=we+make+the+road+by+walking&qid=1657221974&sr=8-1"><em>We Make the Road by Walking</em></a>.</p>
+                    <p>Only some of the content has been added so far. You can access it here: <NuxtLink to="/weekly">Weekly Plan</NuxtLink>.</p>
                 </div>
 
                 

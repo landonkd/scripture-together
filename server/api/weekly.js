@@ -335,9 +335,9 @@ export default (req, res) => {
             title: 'The Spirit Is Moving! (Pentecost Sunday)',
             part: 'IV',
             scripture: [
-                { verses: '' },
-                { verses: '' },
-                { verses: '' },
+                { verses: 'John 3:1-21' },
+                { verses: 'Acts 2:1-41' },
+                { verses: 'Romans 6:1-14' },
             ],
             questions: [
                 '',
@@ -350,9 +350,12 @@ export default (req, res) => {
             title: 'Moving with the Spirit',
             part: 'IV',
             scripture: [
-                { verses: '' },
-                { verses: '' },
-                { verses: '' },
+                { verses: 'John 15:1-8' },
+                { verses: 'Galatians 3:19-4:7' },
+                { verses: 'Galatians 5:1' },
+                { verses: 'Galatians 5:13-16' },
+                { verses: 'Colossians 2:6-7' },
+                { verses: 'Colossians 3:1-17' },
             ],
             questions: [
                 '',
@@ -365,9 +368,9 @@ export default (req, res) => {
             title: 'Spirit of Love: Loving God',
             part: 'IV',
             scripture: [
-                { verses: '' },
-                { verses: '' },
-                { verses: '' },
+                { verses: 'Psalm 116' },
+                { verses: 'Romans 8:1-17' },
+                { verses: 'Ephesians 3:14-21' },
             ],
             questions: [
                 '',
@@ -380,9 +383,8 @@ export default (req, res) => {
             title: 'Spirit of Love: Loving Neighbor',
             part: 'IV',
             scripture: [
-                { verses: '' },
-                { verses: '' },
-                { verses: '' },
+                { verses: 'Acts 10:1-48' },
+                { verses: '1 Corinthians 13:1-13' },
             ],
             questions: [
                 '',
@@ -427,14 +429,14 @@ export default (req, res) => {
             title: 'Spirit of Service',
             part: 'IV',
             scripture: [
-                { verses: '' },
-                { verses: '' },
-                { verses: '' },
+                { verses: 'Matthew 23:1-12' },
+                { verses: 'John 13:1-15' },
+                { verses: 'Philippians 2:1-11' },
             ],
             questions: [
-                '',
-                '',
-                '',
+                'Share a story about a time when you served somone else, and about a time when you were served.',
+                'Activate: This week, be open to the Spirit leading you downward. Come to the next week ready to share your experiences.',
+                'Meditate: Imagine yourself among the original learning circle of disciples. Jesus comes to wash your feet. Simply let that experience play out in your imagination in silence.',
             ],
         },
         {
@@ -442,14 +444,15 @@ export default (req, res) => {
             title: 'The Spirit Conspiracy',
             part: 'IV',
             scripture: [
-                { verses: '' },
-                { verses: '' },
-                { verses: '' },
+                { verses: 'Ephesians 5:15-6:9' },
+                { verses: 'Philemon 1:8-9' },
+                { verses: 'Hebrews 13:1-8' },
+                { verses: 'James 5:1-6' },
             ],
             questions: [
-                '',
-                '',
-                '',
+                'Share a story about a time when you felt the Spirit guided you to go above and beyond your normal way of responding to a situation.',
+                'How do you respond to the idea that our words are a rudder that steers our lives?',
+                'Mediate: In your imagination, walk through a typical day, from waking up to going to bed at night. Imagine yourself as a portal of blessing in each circle of influence.',
             ],
         },
         {
@@ -457,9 +460,10 @@ export default (req, res) => {
             title: 'Spirit of Power',
             part: 'IV',
             scripture: [
-                { verses: '' },
-                { verses: '' },
-                { verses: '' },
+                { verses: 'Acts 4:1-31' },
+                { verses: '1 Thessalonians 5:1-11' },
+                { verses: '2 Timothy 1:1-14' },
+                { verses: 'Ephesians 6:10-20' },
             ],
             questions: [
                 '',
@@ -472,9 +476,13 @@ export default (req, res) => {
             title: 'Spirit of Holiness',
             part: 'IV',
             scripture: [
-                { verses: '' },
-                { verses: '' },
-                { verses: '' },
+                { verses: 'Psalm 98' },
+                { verses: 'John 14:15-18' },
+                { verses: 'John 14:25-27' },
+                { verses: 'John 15:26-27' },
+                { verses: 'John 16:33' },
+                { verses: '1 Corinthians 3:9-15' },
+                { verses: '1 Corinthians 15:20-28' },
             ],
             questions: [
                 '',
