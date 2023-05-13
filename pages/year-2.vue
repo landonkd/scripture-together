@@ -65,7 +65,7 @@
 <script setup>
 
 	// Fetch Data
-	const { data : plan } = await useFetch('/api/wac-year-1')
+	const { data : plan } = await useFetch('/api/wac-year-2')
 
 	// Date Manipulations
 	const today = new Date()

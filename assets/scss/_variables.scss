@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Castoro&family=Noto+Emoji:wght@300;400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Castoro&family=Noto+Emoji:wght@300;400&family=Source+Serif+Pro&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  // Font
+  --serif-heading: 'Castoro Titling', 'Georgia', serif;
+  --serif-body: 'Castoro', 'Georgia', serif;
+  --sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --emoji: 'Noto Emoji';
+
+  // Color Scheme -- Dawnfang/Duskfang (w/ help from Apollo)
+  --sun: #C0855A; // Sun Light - Dawnfang
+  --moon: #5A70C0; // Moon Light - Duskfang
+
+  --green: #76CF8A;
+  --red: #C7412F;
+  --orange: #E98C37;
+  --orange-d: #74471c;
+
+  --colonial-gray: #B5B9BA; 
+  --magnetic-gray: #8f9294; // 828688
+  --mako: #505455;
+  --vulcan: #363A3C;
+  --vulcan-rgb: 54,58,60;
+
+  --graphite: #292D2E; // 2A2F32
+  --noble-black: #1D2123;
+  --normandy-black: #111518; // 111518, 171a1c
+  --normandy-black-rgb: 17,21,24;
+  --deep-space: #070808; // 0c0d0e, 070808
+  --deep-space-rgb: 7,8,8;
+}
+
+
+html {
+  // Var Assignments
+  --highlight: var(--moon);
+
+  --heading-text: var(--colonial-gray);
+  --body-text: var(--magnetic-gray);
+  --low-contrast-text: var(--magnetic-gray);
+  --dark-text: var(--normandy-black);
+
+  --gray: var(--colonial-gray);
+  --gray-d: var(--magnetic-gray);
+  --gray-dd: var(--mako);
+  --gray-ddd: var(--vulcan);
+
+  --bg: var(--graphite);
+  --bg-d: var(--noble-black);
+  --bg-dd: var(--normandy-black);
+  --bg-ddd: var(--deep-space);
+  --bg-dd-rgb: var(--normandy-black-rgb);
+
+  --primary-nav: rgba(var(--bg-dd-rgb), .9);  
+  --border-color: var(--bg);
+
+  --radius: 12px;
+  --radius-lg: 20px;
+
+  &.theme--dawnfang {
+    --highlight: var(--sun);
+  }
+
+  &.theme--duskfang {
+    --highlight: var(--moon);
+  }
+}

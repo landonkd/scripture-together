@@ -1,0 +1,113 @@
+/**
+ * File: base/_mixins.scss
+ *
+ * Useful sass mixins
+ */
+ @use 'sass:math';
+
+ 
+ // Expand a link to cover the container
+ @mixin cover-link {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+ }
+ 
+ // Column
+ @mixin col (
+  $col-size: $col-lg,
+  ) {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $col-size + ($col-pad-sm * 2);
+  padding-left: $col-pad-sm;
+  padding-right: $col-pad-sm;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $bp-md) {
+    max-width: $col-size + ($col-pad-md * 2);
+    padding-left: $col-pad-md;
+    padding-right: $col-pad-md;
+  }
+}
+
+// Position
+@mixin position(
+  $top: 'null',
+  $right: 'null',
+  $bottom: $top,
+  $left: $right,
+  $position: absolute,
+  $z-index: 'null'
+) {
+  position: $position;
+
+  @if $top != 'null' {
+    top: $top;
+  }
+  @if $right != 'null' {
+    right: $right;
+  }
+  @if $bottom != 'null' {
+    bottom: $bottom;
+  }
+  @if $left != 'null' {
+    left: $left;
+  }
+
+  @if $z-index != 'null' {
+    z-index: $z-index;
+  }
+}
+
+// Dimensions
+@mixin dimensions($width, $height) {
+  height: $height;
+  width: $width;
+}
+
+// Font properties
+@mixin font(
+  $size,
+  $line: 'null',
+  $letter: 'null',
+  $weight: 'null',
+  $family: 'null'
+) {
+  font-size: 1rem * math.div($size, $basefontsize);
+  @if $line != 'null' {
+    line-height: math.div($line, $size);
+  }
+
+  @if $letter != 'null' {
+    letter-spacing: math.div($letter, $size) * 1em;
+  }
+
+  @if $weight != 'null' {
+    font-weight: $weight;
+  }
+
+  @if $family != 'null' {
+    font-family: $family;
+  }
+}
+
+// Visually hidden
+@mixin sronly {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@mixin sr-only {
+  @include sronly;
+}

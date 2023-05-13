@@ -1,16 +1,21 @@
 {
+  "name": "nuxt-app",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "sass-dev": "sass --watch --update --style=expanded assets/scss:assets/css",
+    "sass-prod": "sass --no-source-map --style=compressed assets/scss:assets/css"
   },
   "devDependencies": {
-    "@nuxtjs/color-mode": "^3.1.4",
-    "nuxt": "3.0.0-rc.4"
+    "@types/node": "^18",
+    "@vite-pwa/nuxt": "^0.0.7",
+    "nuxt": "^3.4.2"
   },
   "dependencies": {
-    "nuxt-progress": "^0.1.6"
+    "sass": "^1.62.1"
   }
 }
