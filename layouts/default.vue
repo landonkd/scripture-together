@@ -1,5 +1,5 @@
 <template>
-  <div class="layout layout--default">
+  <div class="layout layout--default" :class="`hour-${hour}`">
     <VitePwaManifest />
     <NuxtLoadingIndicator 
       :color="themeColorHex" 
