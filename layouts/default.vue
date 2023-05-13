@@ -26,8 +26,9 @@
   const today = new Date()
 
   // Current Hour of Day
+  // Netlify gives +4 hours
   const hour = today.getHours()
-  const themeColorHex = hour > 6 && hour < 19 ? '#C0855A' : '#5A70C0'
+  const themeColorHex = hour > 10 && hour < 23 ? '#C0855A' : '#5A70C0'
 
   useHead({
     title: 'Scripture Together',
@@ -41,7 +42,7 @@
     ],
     // Change color theme based on time of day
     htmlAttrs: {
-      class: hour > 6 && hour < 19 ? 'theme--dawnfang' : 'theme--duskfang'
+      class: hour > 10 && hour < 23 ? 'theme--dawnfang' : 'theme--duskfang'
     }
   })
 </script>
