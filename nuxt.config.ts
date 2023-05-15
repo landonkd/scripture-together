@@ -31,10 +31,13 @@ export default defineNuxtConfig({
     manifest: {
       name: 'Scripture Together',
       short_name: 'ScriptureTogether',
-      theme_color: '#111518',
-      background_color: "#111518",
-      description: 'Read scripture together.',
+      start_url: '/',
       display: 'standalone',
+      background_color: "#111518",
+      theme_color: '#111518',
+      lang: 'en',
+      scope: '/',
+      description: 'Read scripture together.',
       icons: [
         {
           src: 'pwa-512x512.png',
@@ -45,14 +48,25 @@ export default defineNuxtConfig({
           src: 'pwa-512x512.png',
           sizes: '512x512',
           type: 'image/png',
-          purpose: 'any maskable',
+          purpose: 'maskable',
+        },
+        {
+          src: 'pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any',
         },
       ],
+      dir: 'ltr',
+      orientation: 'portrait',
+      categories: [
+        'lifestyle'
+      ]
     },
-    // workbox: {
-    //   navigateFallback: '/',
-    //   globPatterns: ['**/*.{js,css,html,png,svg}'],
-    // },
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,png,svg}'],
+    },
     client: {
       installPrompt: true,
 			// registerPlugin: false, // Disables this plugin
