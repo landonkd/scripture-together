@@ -49,10 +49,10 @@ export default defineNuxtConfig({
         },
       ],
     },
-    workbox: {
-      navigateFallback: '/',
-      globPatterns: ['**/*.{js,css,html,png,svg}'],
-    },
+    // workbox: {
+    //   navigateFallback: '/',
+    //   globPatterns: ['**/*.{js,css,html,png,svg}'],
+    // },
     client: {
       installPrompt: true,
 			// registerPlugin: false, // Disables this plugin
