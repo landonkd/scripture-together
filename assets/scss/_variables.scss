@@ -58,12 +58,16 @@ html {
 
   --radius: 12px;
   --radius-lg: 20px;
+}
 
-  &.theme--dawnfang {
-    --highlight: var(--sun);
-  }
 
-  &.theme--duskfang {
-    --highlight: var(--moon);
-  }
+/* 
+Color Theme Switcher 
+----------------------------------- */
+.theme--dawnfang {
+  --highlight: var(--sun);
+}
+
+.theme--duskfang {
+  --highlight: var(--moon);
 }

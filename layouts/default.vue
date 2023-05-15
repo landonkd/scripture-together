@@ -1,5 +1,5 @@
 <template>
-  <div class="layout layout--default" :class="`hour-${hour}`">
+  <div class="layout layout--default" :class="`${themeColorClass} hour-${hour}`">
     <VitePwaManifest />
     <NuxtLoadingIndicator 
       :color="themeColorHex" 
@@ -25,16 +25,15 @@
   const today = new Date()
 
   // Current Hour of Day
-  // Netlify timezone gives +4 hours
+  // Netlify timezone is +4 hours
   const hour = today.getHours()
-  const themeColorHex = hour >= 10 && hour <= 22 ? '#C0855A' : '#5A70C0'
+  let themeColorHex = '#C0855A'
+  let themeColorClass = 'theme--dawnfang'
 
-  useHead({
-    // Change color theme based on time of day
-    htmlAttrs: {
-      class: hour >= 10 && hour <= 22 ? 'theme--dawnfang' : 'theme--duskfang'
-    }
-  })
+  if (hour < 10 && hour > 22) {
+    themeColorHex = '#5A70C0'
+    themeColorClass = 'theme--duskfang'
+  }
 </script>
 
 <style>

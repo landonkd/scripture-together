@@ -350,10 +350,15 @@ html {
   --radius: 12px;
   --radius-lg: 20px;
 }
-html.theme--dawnfang {
+
+/* 
+Color Theme Switcher 
+----------------------------------- */
+.theme--dawnfang {
   --highlight: var(--sun);
 }
-html.theme--duskfang {
+
+.theme--duskfang {
   --highlight: var(--moon);
 }
 
@@ -782,36 +787,6 @@ blockquote cite {
   .shadow-realm {
     top: 320px;
   }
-}
-
-.theme-toggle-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  width: 100%;
-}
-
-.theme-toggle {
-  align-items: center;
-  background: var(--bg-dd);
-  border-radius: 50px;
-  border: 1px solid var(--border-color);
-  color: var(--body-text);
-  cursor: pointer;
-  display: flex;
-  font-family: var(--sans);
-  font-size: 0.875rem;
-  justify-content: center;
-  padding: 12px 20px;
-  touch-action: manipulation;
-  transition: 0.1s;
-}
-.theme-toggle:hover, .theme-toggle:focus {
-  background: var(--bg-ddd);
-}
-.theme-toggle svg {
-  margin-right: 10px;
-  stroke: var(--dark-text);
 }
 
 .page--about .emoji {
