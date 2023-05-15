@@ -1,4 +1,4 @@
-export default (req, res) => {
+export default defineEventHandler((event) => {
   return [
     {
       "First Psalm": "Psalms 146-147",
@@ -5606,4 +5606,4 @@ export default (req, res) => {
       "Gospel": "Luke 19:41-48"
     }
   ]
-}
+})

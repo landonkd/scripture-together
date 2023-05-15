@@ -1,4 +1,4 @@
-export default (req, res) => {
+export default defineEventHandler((event) => {
     return [
         {
             week: '1',
@@ -791,4 +791,4 @@ export default (req, res) => {
             ],
         },
     ]
-}
+})

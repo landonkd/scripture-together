@@ -1,4 +1,4 @@
-export default (req, res) => {
+export default defineEventHandler((event) => {
     return [
         {
             day: 0,
@@ -2563,4 +2563,4 @@ export default (req, res) => {
             mem: null
         }
     ]
-}
+})
