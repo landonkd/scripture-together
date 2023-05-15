@@ -69,6 +69,7 @@ export default defineNuxtConfig({
     },
     client: {
       installPrompt: true,
+      periodicSyncForUpdates: 86400,
 			// registerPlugin: false, // Disables this plugin
     },
     devOptions: {

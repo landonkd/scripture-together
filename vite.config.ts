@@ -15,12 +15,15 @@ const getCache = ({ name, pattern }: any) => ({
 export default defineConfig({
   plugins: [
     VitePWA({ 
-      registerType: 'autoUpdate',
       workbox: {
         runtimeCaching: [
           getCache({ 
-            pattern: /^https:\/\/scripture-together.netlify.app\/api/, 
-            name: "api-cache" 
+            name: 'api-cache',
+            pattern: /^https:\/\/scripture-together.netlify.app\/api/
+          }),
+          getCache({
+            name: 'api-cache-2',
+            pattern: /^https:\/\/scripture-together\.netlify\.app\/.*/i
           }),
           {
             urlPattern: ({ url }) => {
@@ -28,12 +31,25 @@ export default defineConfig({
             },
             handler: "CacheFirst" as const,
             options: {
-              cacheName: "api-cache-2",
+              cacheName: "api-cache-3",
               cacheableResponse: {
-                statuses: [0, 200],
+                // statuses: [0, 200],
               },
             },
           },
+          // {
+          //   handler: 'NetworkOnly',
+          //   urlPattern: /\/api\/.*\/*.json/,
+          //   method: 'POST',
+          //   options: {
+          //     backgroundSync: {
+          //       name: 'myQueueName',
+          //       options: {
+          //         maxRetentionTime: 24 * 60
+          //       }
+          //     }
+          //   }
+          // }
         ],
       },
     })
