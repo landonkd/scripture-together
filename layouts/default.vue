@@ -21,28 +21,18 @@
 </template>
 
 <script setup>
-
   // Date Manipulations
   const today = new Date()
 
   // Current Hour of Day
-  // Netlify gives +4 hours
+  // Netlify timezone gives +4 hours
   const hour = today.getHours()
-  const themeColorHex = hour > 10 && hour < 23 ? '#C0855A' : '#5A70C0'
+  const themeColorHex = hour >= 10 && hour <= 22 ? '#C0855A' : '#5A70C0'
 
   useHead({
-    title: 'Scripture Together',
-    meta: [
-      { name: 'theme-color', content: '#111518' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/svg', href: 'favicon.svg' },
-      // { rel: 'icon', type: 'image/svg', href: 'pwa-512x512.png' },
-      { rel: 'mask-icon', type: 'image/svg', href: 'favicon.svg', color: '#FFF' }
-    ],
     // Change color theme based on time of day
     htmlAttrs: {
-      class: hour > 10 && hour < 23 ? 'theme--dawnfang' : 'theme--duskfang'
+      class: hour >= 10 && hour <= 22 ? 'theme--dawnfang' : 'theme--duskfang'
     }
   })
 </script>

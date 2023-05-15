@@ -1,6 +1,23 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
 	app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en'
+      },
+      title: 'Scripture Together',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'theme-color', content: '#111518' },
+        { name: 'description', content: 'Read scripture together.' }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/svg', href: 'favicon.svg' },
+        { rel: 'apple-touch-icon', href: '/pwa-512x512.png', sizes: '512x512' },
+        { rel: 'mask-icon', type: 'image/svg', href: 'favicon.svg', color: '#FFF' }
+      ],
+    },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
 	css: [
@@ -14,7 +31,10 @@ export default defineNuxtConfig({
     manifest: {
       name: 'Scripture Together',
       short_name: 'ScriptureTogether',
-      theme_color: '#1D2123',
+      theme_color: '#111518',
+      background_color: "#111518",
+      description: 'Read scripture together.',
+      display: 'standalone',
       icons: [
         {
           src: 'pwa-512x512.png',
@@ -35,7 +55,7 @@ export default defineNuxtConfig({
     },
     client: {
       installPrompt: true,
-			registerPlugin: false, // Disables this plugin
+			// registerPlugin: false, // Disables this plugin
     },
     devOptions: {
       enabled: true,

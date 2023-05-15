@@ -1,52 +1,49 @@
 <template>
-	<div>
-
-		<main class="page page--weekly">
-			<div class="page__inner-container">   
-					
-				<!-- Controls -->
-				<header class="header">
-					<button class="prev-btn" @click="prevWeek()">
-						<svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-					</button>
-					<div class="header__main">
-						<h1 class="header__title">Week {{ currentWeek }}</h1>
-						<span class="header__today">{{ parseDate(first) + '–' + parseDate(last) }}</span>
-					</div>
-					<button class="next-btn" @click="nextWeek()">
-						<svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-					</button>
-				</header>
-
-				<!-- BANNER -->
-				<div class="section-banner">
-					<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
-					<div>{{ `${readings[currentWeek - 1].part}: ${readings[currentWeek - 1].title}` }}</div>
+	<main class="page page--weekly">
+		<div class="page__inner-container">   
+				
+			<!-- Controls -->
+			<header class="header">
+				<button class="prev-btn" @click="prevWeek()">
+					<svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+				</button>
+				<div class="header__main">
+					<h1 class="header__title">Week {{ currentWeek }}</h1>
+					<span class="header__today">{{ parseDate(first) + '–' + parseDate(last) }}</span>
 				</div>
+				<button class="next-btn" @click="nextWeek()">
+					<svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+				</button>
+			</header>
 
-				<!-- READ -->
-				<div class="section">
-					<h2 class="section__heading">Read</h2>
-					<TransitionGroup name="list" tag="ul" class="section__list">
-						<li v-for="(reading, index) in readings[currentWeek - 1].scripture" :key="reading.verses" :data-index="index">
-							<a :href="`https://www.biblegateway.com/passage/?search=${reading.verses}&version=ESV`" target="_blank">{{ reading.verses }}</a>
-						</li>
-					</TransitionGroup>
-				</div>
-
-				<!-- REFLECT -->
-				<div class="section">
-					<h2 class="section__heading">Reflect</h2>
-					<TransitionGroup name="list" tag="ol" class="section__list list--spacer">
-						<li v-for="(question, index) in readings[currentWeek - 1].questions" :key="question" :data-index="index">
-							{{ question }}
-						</li>
-					</TransitionGroup>
-				</div>
-					
+			<!-- BANNER -->
+			<div class="section-banner">
+				<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+				<div>{{ `${readings[currentWeek - 1].part}: ${readings[currentWeek - 1].title}` }}</div>
 			</div>
-		</main>
-	</div>
+
+			<!-- READ -->
+			<div class="section">
+				<h2 class="section__heading">Read</h2>
+				<TransitionGroup name="list" tag="ul" class="section__list">
+					<li v-for="(reading, index) in readings[currentWeek - 1].scripture" :key="reading.verses" :data-index="index">
+						<a :href="`https://www.biblegateway.com/passage/?search=${reading.verses}&version=ESV`" target="_blank">{{ reading.verses }}</a>
+					</li>
+				</TransitionGroup>
+			</div>
+
+			<!-- REFLECT -->
+			<div class="section">
+				<h2 class="section__heading">Reflect</h2>
+				<TransitionGroup name="list" tag="ol" class="section__list list--spacer">
+					<li v-for="(question, index) in readings[currentWeek - 1].questions" :key="question" :data-index="index">
+						{{ question }}
+					</li>
+				</TransitionGroup>
+			</div>
+				
+		</div>
+	</main>
 </template>
 
 <script setup>
@@ -93,5 +90,4 @@
 	function parseDate(d) {
 		return (d.getMonth() + 1) + '/' + d.getDate()
 	}
-
 </script>

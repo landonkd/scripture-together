@@ -63,7 +63,6 @@
 </template>
 
 <script setup>
-
 	// Fetch Data
 	const { data : plan } = await useFetch('/api/wac-year-1')
 
@@ -99,5 +98,4 @@
 		let dd = dateDisplay.value.getDate()
 		return mm + '/' + dd
 	}
-
 </script>
