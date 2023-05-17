@@ -30,7 +30,7 @@
   let themeColorHex = '#C0855A'
   let themeColorClass = 'theme--dawnfang'
 
-  if (hour < 10 && hour > 22) {
+  if (hour < 10 || hour > 22) {
     themeColorHex = '#5A70C0'
     themeColorClass = 'theme--duskfang'
   }
