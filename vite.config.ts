@@ -19,7 +19,7 @@ export default defineConfig({
         runtimeCaching: [
           getCache({ 
             name: 'api-cache',
-            pattern: /^https:\/\/scripture-together.netlify.app\/api/
+            pattern: /^https:\/\/scripture-together.netlify.app\/api\/api\/wac-year-1/
           }),
           getCache({
             name: 'api-cache-2',
@@ -33,23 +33,10 @@ export default defineConfig({
             options: {
               cacheName: "api-cache-3",
               cacheableResponse: {
-                // statuses: [0, 200],
+                statuses: [0, 200],
               },
             },
           },
-          // {
-          //   handler: 'NetworkOnly',
-          //   urlPattern: /\/api\/.*\/*.json/,
-          //   method: 'POST',
-          //   options: {
-          //     backgroundSync: {
-          //       name: 'myQueueName',
-          //       options: {
-          //         maxRetentionTime: 24 * 60
-          //       }
-          //     }
-          //   }
-          // }
         ],
       },
     })

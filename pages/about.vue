@@ -57,12 +57,5 @@
 </template>
 
 <script setup>
-// List of Bible available
-// https://docs.api.bible/guides/bibles
-// const { data: bibles } = await useFetch('https://api.scripture.api.bible/v1/bibles', {
-//     headers: {
-//       'api-key': 'db3ef1aac5d3b8c47b7c7bfded37dd16',
-//     }
-// })
-// const ASV_ID = '06125adad2d5898a-01'
+
 </script>

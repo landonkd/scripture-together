@@ -1,5 +1,10 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  ssr: true,
+  routeRules: {
+    // Homepage pre-rendered at build time
+    '/': { static: true },
+  },
 	app: {
     head: {
       htmlAttrs: {
@@ -27,6 +32,7 @@ export default defineNuxtConfig({
 		'@vite-pwa/nuxt'
 	],
 	pwa: {
+    injectRegister: 'auto',
     registerType: 'autoUpdate',
     manifest: {
       name: 'Scripture Together',
@@ -73,7 +79,7 @@ export default defineNuxtConfig({
 			// registerPlugin: false, // Disables this plugin
     },
     devOptions: {
-      enabled: true,
+      enabled: false,
       type: 'module',
     },
   }
