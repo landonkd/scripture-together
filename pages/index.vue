@@ -65,7 +65,7 @@
 			<template v-else>
 				<div class="header">
 					<div class="header__main">
-						<h1 class="header__title">Data Unavailable</h1>
+						<h1 class="header__title">Data Offline</h1>
 					</div>
 				</div>
 			</template>

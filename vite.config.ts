@@ -19,11 +19,7 @@ export default defineConfig({
         runtimeCaching: [
           getCache({ 
             name: 'api-cache',
-            pattern: /^https:\/\/scripture-together.netlify.app\/api\/api\/wac-year-1/
-          }),
-          getCache({
-            name: 'api-cache-2',
-            pattern: /^https:\/\/scripture-together\.netlify\.app\/.*/i
+            pattern: /^https:\/\/scripture-together.netlify.app\/api\/api\/.*/i
           }),
           {
             urlPattern: ({ url }) => {
@@ -31,7 +27,7 @@ export default defineConfig({
             },
             handler: "CacheFirst" as const,
             options: {
-              cacheName: "api-cache-3",
+              cacheName: "api-cache-2",
               cacheableResponse: {
                 statuses: [0, 200],
               },
