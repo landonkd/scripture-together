@@ -1,0 +1,30 @@
+.page--about .emoji {
+  color: var(--highlight);
+  font-family: var(--emoji);
+  font-size: 5rem;
+  font-weight: 300;
+  margin-bottom: -10px;
+  background: -webkit-linear-gradient(0deg, var(--sun), var(--moon));
+  background: linear-gradient(90deg, var(--sun), var(--moon));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (min-width: 600px) {
+  .page--about .emoji {
+    font-size: 7rem;
+    margin-bottom: -20px;
+  }
+}
+.page--about .header__title {
+  letter-spacing: 5px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .page--about .header__title {
+    margin-bottom: 20px;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

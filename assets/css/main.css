@@ -633,12 +633,17 @@ Utility Classes
 
 .header__today {
   border-radius: 50px;
-  border: 1px solid var(--highlight);
-  color: var(--highlight);
+  border: 1px solid var(--gray-dd);
+  color: var(--gray-dd);
   font-family: var(--serif-heading);
   font-size: 1rem;
   margin-left: 8px;
   padding: 6px 16px 4px;
+  transition: 0.1s;
+}
+.header__today.is-current-day {
+  border-color: var(--highlight);
+  color: var(--highlight);
 }
 
 .prev-btn, .next-btn {
