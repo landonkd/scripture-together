@@ -1,10 +1,18 @@
 .page--about {
+  .header {
+    margin-bottom: 20px;
+    @media (min-width: 600px) {
+      margin-bottom: 40px;
+    }
+  }
+  
   .emoji {
     color: var(--highlight);
     font-family: var(--emoji);
     font-size: 5rem;
     font-weight: 300;
     margin-bottom: -10px;
+    margin-top: -20px;
 
     background: -webkit-linear-gradient(0deg, var(--sun), var(--moon));
     background: linear-gradient(90deg, var(--sun), var(--moon));
@@ -16,6 +24,7 @@
       margin-bottom: -20px;
     }
   }
+
   .header__title {
     letter-spacing: 5px;
     line-height: 1.3;

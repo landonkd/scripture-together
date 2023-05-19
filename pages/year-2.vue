@@ -12,7 +12,7 @@
 
 				<div class="header__main">
 					<h1 class="header__title">Day {{ day }}</h1>
-					<span class="header__today">{{ getDateDisplayFormatted() }}</span>
+					<span class="header__today" :class="{ 'is-current-day': todayInYear === day }">{{ getDateDisplayFormatted() }}</span>
 				</div>
 
 				<button class="next-btn" @click="nextDay()">
