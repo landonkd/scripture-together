@@ -9,11 +9,11 @@
 				</div>
 			</header>
 
-			<section class="section">
-				<h2 class="section__heading">About</h2>
+			<section class="section section--verse">
 				<blockquote>
 					<p>
-						“Blessed is the man<br>who walks not in the counsel of the wicked,<br>
+						“Blessed is the man<br>
+						who walks not in the counsel of the wicked,<br>
 						nor stands in the way of sinners,<br>
 						nor sits in the seat of scoffers;<br>
 						but his delight is in the law of the LORD,<br>
@@ -33,7 +33,7 @@
 			</section>
 
 			<section class="section">
-				<h2 class="section__heading">Daily</h2>
+				<h2 class="section__heading">Daily Reading</h2>
 				<p>Read through the entire Bible with a 2 year plan. Each day you are given one New Testament and one Old Testament scripture to read. The end of each month includes days to catch up on missed reading, mediate and study deeper on passages that impacted you, or prepare for and study the background for next month's reading. Scripture references are in the ESV.</p>
 				<ul>
 					<li>
@@ -45,6 +45,17 @@
 				</ul>
 				<p><em>Source: <a href="https://www.wearechurch.com/">wearechurch.com</a></em></p>
 			</section>
+
+			<!-- REFLECT -->
+			<div class="section">
+					<h2 class="section__heading">Reflection</h2>
+					<h3 class="section__subheading">Pray for Insight</h3>
+					<p>What key truths is God communicating?</p>
+					<h3 class="section__subheading">God Being Revealed</h3>
+					<p>What does this tell you about God and who He is?</p>
+					<h3 class="section__subheading">Respond</h3>
+					<p>What is the Holy Spirit guiding you to become, repent of, share, or do differently today? Ask God to help you.</p>
+				</div>
 			
 			<!-- <section class="component-bg">
 				<h2>Weekly</h2>

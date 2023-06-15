@@ -64,9 +64,24 @@
   }
 }
 
+.section--verse {
+  padding: 0;
+  blockquote {
+    background: linear-gradient(90deg, var(--bg-dd) 0%, var(--bg-d) 50%);
+    border: 2px solid var(--highlight);
+    // border: none;
+    border-radius: var(--radius);
+    margin: 0 !important;
+    padding: 24px 20px;
+    @media (min-width: 440px) {
+      padding: 30px 30px;
+    }
+  }
+}
+
 blockquote {
   background-color: var(--bg-dd);
-  background: linear-gradient(90deg, rgba(17,21,24,1) 0%, rgba(29,33,35,1) 75%);
+  background: linear-gradient(90deg, var(--bg-dd) 0%, var(--bg-d) 75%);
   border-left: 3px solid var(--gray-ddd);
   margin: 20px 0 0;
   padding: 20px;

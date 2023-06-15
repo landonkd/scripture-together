@@ -30,6 +30,15 @@
   --normandy-black-rgb: 17,21,24;
   --deep-space: #070808; // 0c0d0e, 070808
   --deep-space-rgb: 7,8,8;
+
+  // Motion
+  --ease-in-out--cubic: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-in--cubic: cubic-bezier(.895,.03,.685,.22);
+  --ease-out--cubic: cubic-bezier(.165,.84,.44,1);
+
+  --ease-in-out: var(--ease-in-out--cubic);
+  --ease-out: var(--ease-out--cubic);
+  --ease-in: var(--ease-in--cubic);
 }
 
 

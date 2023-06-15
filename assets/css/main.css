@@ -328,6 +328,12 @@ template {
   --normandy-black-rgb: 17,21,24;
   --deep-space: #070808;
   --deep-space-rgb: 7,8,8;
+  --ease-in-out--cubic: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-in--cubic: cubic-bezier(.895,.03,.685,.22);
+  --ease-out--cubic: cubic-bezier(.165,.84,.44,1);
+  --ease-in-out: var(--ease-in-out--cubic);
+  --ease-out: var(--ease-out--cubic);
+  --ease-in: var(--ease-in--cubic);
 }
 
 html {
@@ -521,12 +527,18 @@ Utility Classes
 .list-move,
 .list-enter-active,
 .list-leave-active {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.3s var(--ease-in-out);
+  transition: all 0.3s var(--ease-in-out);
+}
+.list-move:nth-child(2n),
+.list-enter-active:nth-child(2n),
+.list-leave-active:nth-child(2n) {
+  transition-delay: 0.1s;
 }
 
 .list-enter-from {
   opacity: 0;
+  transform: translateY(10px);
 }
 
 .list-leave-to {
@@ -746,9 +758,25 @@ Utility Classes
   margin-bottom: -5px;
 }
 
+.section--verse {
+  padding: 0;
+}
+.section--verse blockquote {
+  background: linear-gradient(90deg, var(--bg-dd) 0%, var(--bg-d) 50%);
+  border: 2px solid var(--highlight);
+  border-radius: var(--radius);
+  margin: 0 !important;
+  padding: 24px 20px;
+}
+@media (min-width: 440px) {
+  .section--verse blockquote {
+    padding: 30px 30px;
+  }
+}
+
 blockquote {
   background-color: var(--bg-dd);
-  background: linear-gradient(90deg, rgb(17, 21, 24) 0%, rgb(29, 33, 35) 75%);
+  background: linear-gradient(90deg, var(--bg-dd) 0%, var(--bg-d) 75%);
   border-left: 3px solid var(--gray-ddd);
   margin: 20px 0 0;
   padding: 20px;
