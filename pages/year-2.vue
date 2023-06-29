@@ -42,21 +42,10 @@
 					<ul class="section__list list--spacer">
 						<li>Catch up on any missed reading.</li>
 						<li>Meditate and study deeper on passages that have impacted you this month.</li>
-						<li>Start to prepare for and study backgrounds for next month's Scriptural reading.</li>
+						<li>Start to prepare for and study backgrounds for next month's reading.</li>
 					</ul>
 				</div>
 			</template>
-
-			<!-- REFLECT -->
-			<div class="section">
-				<h2 class="section__heading">Reflect</h2>
-				<h3 class="section__subheading">Pray for Insight</h3>
-				<p>What key truths is God communicating?</p>
-				<h3 class="section__subheading">God Being Revealed</h3>
-				<p>What does this tell you about God and who He is?</p>
-				<h3 class="section__subheading">Respond</h3>
-				<p>What is the Holy Spirit guiding you to become, repent of, share, or do differently today? Ask God to help you.</p>
-			</div>
 				
 		</div>
 	</main>

@@ -43,7 +43,7 @@
 						<ul class="section__list list--spacer">
 							<li>Catch up on any missed reading.</li>
 							<li>Meditate and study deeper on passages that have impacted you this month.</li>
-							<li>Start to prepare for and study backgrounds for next month's Scriptural reading.</li>
+							<li>Start to prepare for and study backgrounds for next month's reading.</li>
 						</ul>
 					</div>
 				</template>
