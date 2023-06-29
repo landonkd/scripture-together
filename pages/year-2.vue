@@ -5,7 +5,7 @@
 			<header class="header">
 
 				<!-- CONTROLS -->
-				<button class="prev-btn" @click="prevDay()">
+				<button class="prev-btn" @click="prevDay()" ontouchstart>
 					<span class="sr-only">Previous Day</span>
 					<svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
 				</button>
@@ -15,7 +15,7 @@
 					<span class="header__today" :class="{ 'is-current-day': todayInYear === day }">{{ getDateDisplayFormatted() }}</span>
 				</div>
 
-				<button class="next-btn" @click="nextDay()">
+				<button class="next-btn" @click="nextDay()" ontouchstart>
 					<span class="sr-only">Next Day</span>
 					<svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
 				</button>
@@ -39,11 +39,11 @@
 			<template v-else>
 				<div class="section">
 					<h2 class="section__heading">End of Month</h2>
-					<ol class="section__list list--spacer">
+					<ul class="section__list list--spacer">
 						<li>Catch up on any missed reading.</li>
 						<li>Meditate and study deeper on passages that have impacted you this month.</li>
 						<li>Start to prepare for and study backgrounds for next month's Scriptural reading.</li>
-					</ol>
+					</ul>
 				</div>
 			</template>
 

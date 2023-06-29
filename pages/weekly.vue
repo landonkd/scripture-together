@@ -4,14 +4,14 @@
 				
 			<!-- Controls -->
 			<header class="header">
-				<button class="prev-btn" @click="prevWeek()">
+				<button class="prev-btn" @click="prevWeek()" ontouchstart>
 					<svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
 				</button>
 				<div class="header__main">
 					<h1 class="header__title">Week {{ currentWeek }}</h1>
 					<span class="header__today">{{ parseDate(first) + '–' + parseDate(last) }}</span>
 				</div>
-				<button class="next-btn" @click="nextWeek()">
+				<button class="next-btn" @click="nextWeek()" ontouchstart>
 					<svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
 				</button>
 			</header>
