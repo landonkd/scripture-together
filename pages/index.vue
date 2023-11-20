@@ -24,6 +24,7 @@
 				</header>
 
 				<!-- READ -->
+				<!-- https://support.pushpay.com/s/article/How-do-I-link-to-the-Bible-in-my-app -->
 				<TransitionGroup v-if="plan[day].nt && plan[day].ot" name="list" tag="ul" class="scripture-list section__list">
 					<li :key="plan[day].nt" class="scripture-list__item">
 						<a target="_blank" :href="`https://www.esv.org/${plan[day].nt}`">
