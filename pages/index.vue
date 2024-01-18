@@ -25,14 +25,16 @@
 
 				<!-- READ -->
 				<!-- https://support.pushpay.com/s/article/How-do-I-link-to-the-Bible-in-my-app -->
+				<!-- https://www.esv.org/${plan[day].nt} -->
+				<!-- https://www.biblegateway.com/passage/?search=${plan[day].nt}&version=ESV -->
 				<TransitionGroup v-if="plan[day].nt && plan[day].ot" name="list" tag="ul" class="scripture-list section__list">
 					<li :key="plan[day].nt" class="scripture-list__item">
-						<a target="_blank" :href="`https://www.esv.org/${plan[day].nt}`">
+						<a target="_blank" :href="`https://www.biblegateway.com/passage/?search=${plan[day].nt}&version=ESV`">
 							{{ plan[day].nt }}
 						</a>
 					</li>
 					<li :key="plan[day].ot" class="scripture-list__item">
-						<a target="_blank" :href="`https://www.esv.org/${plan[day].ot}`">
+						<a target="_blank" :href="`https://www.biblegateway.com/passage/?search=${plan[day].ot}&version=ESV`">
 							{{ plan[day].ot }}
 						</a>
 					</li>

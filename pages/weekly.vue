@@ -1,14 +1,15 @@
 <template>
 	<main class="page page--weekly">
-		<div class="page__inner-container">   
+		<article class="page__inner-container">   
 				
 			<!-- Controls -->
+			<!-- @todo: Refactor -->
 			<header class="header">
 				<button class="prev-btn" @click="prevWeek()" ontouchstart>
 					<svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
 				</button>
 				<div class="header__main">
-					<h1 class="header__title">Week {{ currentWeek }}</h1>
+					<div class="header__title">WEEK {{ currentWeek }}</div>
 					<span class="header__today">{{ parseDate(first) + '–' + parseDate(last) }}</span>
 				</div>
 				<button class="next-btn" @click="nextWeek()" ontouchstart>
@@ -16,33 +17,39 @@
 				</button>
 			</header>
 
-			<!-- BANNER -->
-			<div class="section-banner">
-				<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#fff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
-				<div>{{ `${readings[currentWeek - 1].part}: ${readings[currentWeek - 1].title}` }}</div>
-			</div>
+			<!-- Header/Banner -->
+			<!-- @todo: Refactor -->
+			<header class="section-banner">
+				<div>Part {{ `${readings[currentWeek - 1].part}: ${readings[currentWeek - 1].title}` }}</div>
+			</header>
 
 			<!-- READ -->
-			<div class="section">
+			<section class="section">
 				<h2 class="section__heading">Read</h2>
-				<TransitionGroup name="list" tag="ul" class="section__list">
-					<li v-for="(reading, index) in readings[currentWeek - 1].scripture" :key="reading.verses" :data-index="index">
+				<ul class="section__list">
+					<li v-for="(reading, i) in readings[currentWeek - 1].scripture" :key="reading.verses" :data-index="i">
 						<a :href="`https://www.biblegateway.com/passage/?search=${reading.verses}&version=ESV`" target="_blank">{{ reading.verses }}</a>
 					</li>
-				</TransitionGroup>
-			</div>
+				</ul>
+			</section>
 
-			<!-- REFLECT -->
-			<div class="section">
-				<h2 class="section__heading">Reflect</h2>
-				<TransitionGroup name="list" tag="ol" class="section__list list--spacer">
-					<li v-for="(question, index) in readings[currentWeek - 1].questions" :key="question" :data-index="index">
-						{{ question }}
+			<!-- REMARKS -->
+			<section class="section">
+				<h2 class="section__heading">Remarks</h2>
+				<div class="section__remarks" v-html="readings[currentWeek - 1].remarks" ></div>
+			</section>
+
+			<!-- RESPONSE -->
+			<section class="section">
+				<h2 class="section__heading">Response</h2>
+				<ol class="section__list list--spacer">
+					<li v-for="(response, i) in readings[currentWeek - 1].response" :key="question" :data-index="i">
+						{{ response }}
 					</li>
-				</TransitionGroup>
-			</div>
+				</ol>
+			</section>
 				
-		</div>
+		</article>
 	</main>
 </template>
 

@@ -12,6 +12,7 @@
         <ul>
           <li><NuxtLink to="/">Year 1</NuxtLink></li>
           <!-- <li><NuxtLink to="/year-2">Year 2</NuxtLink></li> -->
+          <!-- <li><NuxtLink to="/weekly">Weekly</NuxtLink></li> -->
           <li><NuxtLink to="/about">About</NuxtLink></li>
         </ul>
       </div>
