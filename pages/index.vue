@@ -29,12 +29,12 @@
 				<!-- https://www.biblegateway.com/passage/?search=${plan[day].nt}&version=ESV -->
 				<TransitionGroup v-if="plan[day].nt && plan[day].ot" name="list" tag="ul" class="scripture-list section__list">
 					<li :key="plan[day].nt" class="scripture-list__item">
-						<a target="_blank" :href="`https://www.biblegateway.com/passage/?search=${plan[day].nt}&version=ESV`">
+						<a target="_blank" :href="`https://www.esv.org/${plan[day].nt}`">
 							{{ plan[day].nt }}
 						</a>
 					</li>
 					<li :key="plan[day].ot" class="scripture-list__item">
-						<a target="_blank" :href="`https://www.biblegateway.com/passage/?search=${plan[day].ot}&version=ESV`">
+						<a target="_blank" :href="`https://www.esv.org/${plan[day].ot}`">
 							{{ plan[day].ot }}
 						</a>
 					</li>

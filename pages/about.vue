@@ -28,7 +28,7 @@
 						The wicked are not so,<br>
 						but are like chaff that the wind drives away.”
 					</p>
-					<cite><a href="https://www.esv.org/Psalm+1/">Psalm 1:1-4 (ESV)</a></cite>
+					<cite><a href="https://www.bible.com/bible/111/PSA.1.NIV">Psalm 1:1-4 (NIV)</a></cite>
 				</blockquote>
 			</section>
 
